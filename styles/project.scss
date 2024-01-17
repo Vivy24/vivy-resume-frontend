@@ -1,0 +1,159 @@
+html,
+body {
+    margin: 20px 0px 0px 0px;
+    padding-bottom: 30px;
+    background-image: url("../image/pink-glitter.png");
+    font-family: 'Quicksand', sans-serif;
+    cursor: url("../image/cursor-normal.png"), auto;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+h3,
+.back-home {
+    margin-left: 5px;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        cursor: url("../image/cursor-pointer.png"), pointer;
+        text-shadow: 0 0 10px rgba(255, 105, 180, 0.8),
+            0 0 20px rgba(255, 105, 180, 0.6),
+            0 0 30px rgba(255, 105, 180, 0.4),
+            0 0 40px rgba(255, 105, 180, 0.2);
+    }
+}
+
+table {
+    width: 100%;
+    margin: 50px 20px;
+    border-collapse: collapse;
+
+    .title {
+        box-shadow: 1px 1px 1px #fccce9,
+            -1px -1px 1px #fccce9,
+            2px -2px 2px #fccce9,
+            -2px 2px 2px #fccce9,
+            0px 0px 2px #fccce9;
+        background-image: url("../image/pink-glitter.png");
+        position: sticky;
+        text-align: left;
+        top: 0;
+        z-index: 1;
+    }
+
+    td {
+        padding: 20px 20px 20px 0px;
+        border-bottom: 0.1px solid #e4b2d6;
+    }
+
+    td:nth-child(1),
+    th:nth-child(1) {
+        width: 20%;
+    }
+
+    td:nth-child(n+3),
+    th:nth-child(n+3) {
+        display: none;
+    }
+
+    .project-name {
+        display: none;
+    }
+
+}
+
+
+
+
+
+@media only screen and (min-width: 576px) {}
+
+@media only screen and (min-width: 768px) {
+
+
+
+    .small-link {
+        display: none;
+    }
+
+    table {
+        .project-name {
+            display: block;
+            width: fit-content;
+        }
+
+        td:nth-child(5),
+        th:nth-child(5) {
+            display: table-cell;
+            width: 30%;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    table {
+
+
+        .code {
+            display: inline-block;
+            width: fit-content;
+            background-color: #8fa7d8;
+            padding: 5px 10px;
+            border-radius: 25px;
+            margin: 1px 2px;
+            font-size: 0.8em;
+        }
+
+        td:nth-child(1),
+        td:nth-child(1) {
+            width: 10%;
+        }
+
+
+        td:nth-child(2),
+        td:nth-child(2) {
+            width: 20%;
+        }
+
+        td:nth-child(3),
+        th:nth-child(3) {
+            display: table-cell;
+            width: 20%;
+        }
+
+        td:nth-child(4),
+        th:nth-child(4) {
+            display: table-cell;
+            width: 40%;
+        }
+
+        td:nth-child(5),
+        th:nth-child(5) {
+            width: 20%;
+        }
+
+    }
+}
+
+@media only screen and (min-width: 1200px) {}
