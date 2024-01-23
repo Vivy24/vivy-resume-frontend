@@ -83,6 +83,11 @@ li:hover {
   cursor: url("../image/cursor-pointer.png"), pointer;
 }
 
+.job-location {
+  margin-left: 25px;
+  font-size: 0.8em;
+}
+
 .title {
   background-color: transparent;
   z-index: 10;
