@@ -14,7 +14,7 @@ function isInViewport(element) {
 function checkVisitor() {
   const guestTotal = document.querySelector("#guest-number")
   const apiURL =
-    "https://ax4rn5pd59.execute-api.us-east-1.amazonaws.com/visitors"
+    "https://zybyt0ugh6.execute-api.us-east-1.amazonaws.com/Prod/visitors"
   // Make a GET request
   fetch(apiURL)
     .then((response) => {
