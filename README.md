@@ -15,7 +15,7 @@
         <a href="https://vivyvuong.dev">View My Resume</a>
     <br />
     <br />
-    <a href="https://github.com/Vivy24/vivy-resume-frontend">Go to back-end code</a>
+    <a href="https://github.com/Vivy24/vivy-resume-backend">Go to back-end code</a>
   </p>
 </div>
 
