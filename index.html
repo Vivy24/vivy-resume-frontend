@@ -1,442 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Vivy Vuong</title>
-    <link
-      type="image/png"
-      sizes="16x16"
-      rel="icon"
-      href="./image/fairy.png"
-    />
 
-    <script
-      src="scripts/main.js"
-      defer
-    ></script>
-    <link
-      rel="stylesheet"
-      href="styles/main.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivy Vuong</title>
+  <link type="image/png" sizes="16x16" rel="icon" href="./image/fairy.png" />
 
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="shortcut icon"
-      href="#"
-    />
-  </head>
-  <body>
-    <div class="layout">
-      <div class="left-layout">
-        <section id="info">
-          <h2>Vivy Vuong</h2>
-          <h4>
-            <img
-              width="20px"
-              id="wing-left"
-              src="image/wing.png"
-            />
-            Junior Developer
-            <img
-              width="20px"
-              id="wing-right"
-              src="image/wing.png"
-            />
-          </h4>
-          <p id="info-paragraph">
-            Highly motivated developer with a passion with cloud development and
-            want to become a good DevOps in the future.
-          </p>
-          <div class="links">
-            <nav>
-              <ul>
-                <li>
-                  <a href="#about">
-                    <img
-                      class="a-normal"
-                      src="image/normal-link.png"
-                      width="20"
-                    />
-                    <img
-                      class="a-active"
-                      src="image/active-link.png"
-                      width="20"
-                    />
-                    About Me
-                  </a>
-                </li>
-                <li>
-                  <a href="#experiences">
-                    <img
-                      class="a-normal"
-                      src="image/normal-link.png"
-                      width="20"
-                    />
-                    <img
-                      class="a-active"
-                      src="image/active-link.png"
-                      width="20"
-                    />
-                    Experiences
-                  </a>
-                </li>
-                <li>
-                  <a href="#projects">
-                    <img
-                      class="a-normal"
-                      src="image/normal-link.png"
-                      width="20"
-                    />
-                    <img
-                      class="a-active"
-                      src="image/active-link.png"
-                      width="20"
-                    />
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="#certifications">
-                    <img
-                      class="a-normal"
-                      src="image/normal-link.png"
-                      width="20"
-                    />
-                    <img
-                      class="a-active"
-                      src="image/active-link.png"
-                      width="20"
-                    />
-                    Certifications & Awards
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <p id="guest">
-            Number of Enchanted Guests: <span id="guest-number"><span id="loading"></span></span>
-          </p>
-        </section>
-      </div>
-      <div class="right-layout">
-        <section id="about">
-          <div class="title">
-            <img
-              width="30"
-              src="data:image/png;base64,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"
-            />
-            About Me
-          </div>
-          <p>
-            Hello, lovely visitors! Step into my enchanting realm where magic
-            meets technology. I'm Vivy Vuong, a delighted computer diploma
-            graduate from Seneca College (Class of 2024). My coding escapade
-            began in grade 10, and ever since, I've been captivated by the joy
-            of problem-solving and crafting full-cycle software applications.
-          </p>
-          <p>
-            In the mystical year of 2022, I discovered the wonders of cloud
-            technology — a true game-changer! Alongside refining my coding
-            skills, I have discovered the realms of AWS and Azure during my free
-            time. From configuring diverse environments to navigating various
-            AWS services, my journey into the clouds has been nothing short of
-            magical.
-          </p>
-          <p>
-            Bringing joy to both people and technologies is my forte, and
-            designing systems is where my heart truly sparkles. My ultimate
-            dream is transform into a DevOps fairy.
-          </p>
-          <p>
-            When I'm not weaving code spells, you might catch me swimming in the
-            fairy pool, exploring computer games (Stardew Valley being my happy
-            fairy glade), or diving into the wonders of /AskReddit on Reddit.
-            Beyond the digital pixels and enchanting pools, my heart is drawn to
-            the magic world. So, whether we're decoding algorithms or foreseeing
-            the future, let's connect and embark on a fairy-tale journey through
-            the wonders of tech together! 🌸✨
-          </p>
-        </section>
-        <section id="experiences">
-          <div class="title">
-            <img
-              width="30"
-              src="data:image/png;base64,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"
-            />
-            Experiences
-          </div>
-          <div class="job-board">
-            <div class="job card">
-              <div class="date">
-                <img
-                  width="20"
-                  height="20"
-                  src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/32/external-cloud-valentines-day-kmg-design-outline-color-kmg-design.png"
-                  alt="external-cloud-valentines-day-kmg-design-outline-color-kmg-design"
-                  alt="decorative"
-                />
-                Sep 2021 - Present (Part time)
-              </div>
-              <div class="job-description">
-                <img
-                  width="20"
-                  src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-rainbow-vikings-flaticons-lineal-color-flat-icons.png"
-                  alt="decorative"
-                />
-                <span class="job-title"
-                  >Data Entry Specialist </span></br>
-                  <span class="job-location">Vican Multi-Service </span>
-                <p>
-                  Effectively resolving customer supports across multiple
-                  channels, ensuring quick resolutions and positive experiences.
-                  Additionally, complete over 200 daily data entry tasks with an
-                  accuracy rate over 98%
-                </p>
-                <span class="tag">Customer Support</span>
-                <span class="tag">Data Entry</span>
-              </div>
-            </div>
+  <script src="scripts/main.js" defer></script>
+  <link rel="stylesheet" href="styles/main.css" />
 
-            <div class="job card">
-              <div class="date">
-                <img
-                  width="20"
-                  height="20"
-                  src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/32/external-cloud-valentines-day-kmg-design-outline-color-kmg-design.png"
-                  alt="external-cloud-valentines-day-kmg-design-outline-color-kmg-design"
-                  alt="decorative"
-                />
-                Sep 2023 - Nov 2023 (Intern)
-              </div>
-              <div class="job-description">
-                <img
-                  width="20"
-                  src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-rainbow-vikings-flaticons-lineal-color-flat-icons.png"
-                  alt="decorative"
-                />
-                <span class="job-title"> 
-                   IT Support 
-                </span> </br>
-                <span class="job-location">
-                  Seneca - ITS Student Lab Monitor and Hyflex ambassador
-                </span>
-                <p>
-                  Proactively monitor computer Lab rooms and e-classrooms prior
-                  to session start, ensure operation readiness functionality.
-                  Assisting staff and professors in resolving technical issues
-                  when using computers, touch pads, podium, AV gear, projectors
-                  during class time.
-                </p>
-                <span class="tag">Customer Support</span>
-                <span class="tag">IT Support</span>
-              </div>
-            </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="#" />
+</head>
 
-            <div class="job card">
-              <div class="date">
-                <img
-                  width="20"
-                  height="20"
-                  src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/32/external-cloud-valentines-day-kmg-design-outline-color-kmg-design.png"
-                  alt="external-cloud-valentines-day-kmg-design-outline-color-kmg-design"
-                  alt="decorative"
-                />
-                Sep 2022 - Aug 2023 (Co-op)
-              </div>
-              <div class="job-description">
-                <img
-                  width="20"
-                  src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-rainbow-vikings-flaticons-lineal-color-flat-icons.png"
-                  alt="decorative"
-                />
-                <span class="job-title">
-                  System Developer (Junior DevOps)
-                </span></br>
-                  <span class="job-location">
-                  Healthcare of Ontario Pension Plan - HOOPP
-                  </span>
-                <p>
-                  Set up developer test pipeline in Azure DevOps using xUnit and
-                  Moq for .NET application, ensure that 100% codebase is correct
-                  and run as expected. Cleaned up multiple applications to
-                  separate data, presentation and application layer to improve
-                  code readiness.
-                </p>
-                <span class="tag">C#</span>
-                <span class="tag">.NET</span>
-                <span class="tag">xUnit</span>
-                <span class="tag">Moq</span>
-                <span class="tag">Azure DevOps</span>
-              </div>
-            </div>
-          </div>
-          <li class="section-link">
-            <img
-              width="24"
-              height="24"
-              src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-fairy-tale-literature-flaticons-lineal-color-flat-icons.png"
-              alt="external-fairy-tale-literature-flaticons-lineal-color-flat-icons"
-            />
-            <a
-              href="resume.pdf"
-              target="_blank"
-            >
-              View full resume
-            </a>
-          </li>
-        </section>
-
-        <section id="projects">
-          <div class="title">
-            <img
-              width="30"
-              src="data:image/png;base64,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"
-            />
-            Projects
-          </div>
-
-          <div class="card">
-            <div class="date">
-              <img
-                src="image/aws-project.png"
-                width="200"
-              />
-            </div>
-            <div class="job-description">
-              <img
-                width="20"
-                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-rainbow-vikings-flaticons-lineal-color-flat-icons.png"
-                alt="decorative"
-              />
-              <span class="job-title"
-                ><a
-                  href="https://gitfront.io/r/Vivy24/evw3oGuD7j2k/fragments/"
-                  target="_blank"
-                  >AWS Data Storage
+<body>
+  <div class="layout">
+    <div class="left-layout">
+      <section id="info">
+        <h2>Vivy Vuong</h2>
+        <h4>
+          <img width="20px" id="wing-left" src="image/wing.png" />
+          Junior Developer
+          <img width="20px" id="wing-right" src="image/wing.png" />
+        </h4>
+        <p id="info-paragraph">
+          Highly motivated developer with a passion with cloud development and
+          want to become a good DevOps in the future.
+        </p>
+        <div class="links">
+          <nav>
+            <ul>
+              <li>
+                <a href="#about">
+                  <img class="a-normal" src="image/normal-link.png" width="20" />
+                  <img class="a-active" src="image/active-link.png" width="20" />
+                  About Me
                 </a>
-              </span>
-              <p>
-                A web application integrated with AWS services (ECS, ELB S3
-                Bucket, DynamoDB, Cognito and Route 53) that allows users to
-                upload, access, and handle different types of data fragments.
-                Set up a robust CI/CD pipelines for automated test and deploy
-                through Github Actions
-              </p>
-              <span class="tag">Typescript</span>
-              <span class="tag">AWS Services</span>
-              <span class="tag">NextJS</span>
-              <span class="tag">ExpressJS</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="date">
-              <img
-                src="image/peertutor.png"
-                width="200"
-              />
-            </div>
-            <div class="job-description">
-              <img
-                width="20"
-                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-rainbow-vikings-flaticons-lineal-color-flat-icons.png"
-                alt="decorative"
-              />
-              <span class="job-title">
-                <a
-                  href="https://github.com/Vivy24/PeerTutor"
-                  target="_blank"
-                  >Peer Tutor
+              </li>
+              <li>
+                <a href="#experiences">
+                  <img class="a-normal" src="image/normal-link.png" width="20" />
+                  <img class="a-active" src="image/active-link.png" width="20" />
+                  Experiences
                 </a>
-              </span>
-              <p>
-                A web application written in PERN stacks that allows users to
-                book study time with other students. Integrated with 3 types of
-                users, admin , tutor and student. Deployed to Vercel
-              </p>
-              <span class="tag">Javascript</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">ExpressJS</span>
-              <span class="tag">React</span>
-              <span class="tag">Vercel</span>
-            </div>
-          </div>
-
-          <li class="section-link">
-            <img
-              width="24"
-              height="24"
-              src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-fairy-tale-literature-flaticons-lineal-color-flat-icons.png"
-              alt="external-fairy-tale-literature-flaticons-lineal-color-flat-icons"
-            />
-            <a href="/project.html"> Go to project world </a>
-          </li>
-        </section>
-        <section id="certifications">
-          <div class="title">
-            <img
-              width="30"
-              src="data:image/png;base64,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"
-            />
-            Certifications & Awards
-          </div>
-
-          <li>
-            <img
-              width="20"
-              height="20"
-              src="https://img.icons8.com/plasticine/20/filled-star.png"
-              alt="filled-star"
-            />
-            <a href="https://aws.amazon.com/certification/certified-developer-associate/" target="_blank">AWS Developer Associate &#8226; March 2024</a>
-          </li>
-          <li>
-            <img
-              width="20"
-              height="20"
-              src="https://img.icons8.com/plasticine/20/filled-star.png"
-              alt="filled-star"
-            />
-            <a href="https://www.credly.com/badges/309c8ddf-9565-4872-bf76-57e9cfe2e614?source=linked_in_profile" target="_blank">Microsoft Certified: Azure Fundamental &#8226; September 2021</a>
-          </li>
-
-          <li>
-            <img
-              width="20"
-              height="20"
-              src="https://img.icons8.com/plasticine/20/filled-star.png"
-              alt="filled-star"
-            />
-            <a href="https://2023.senecahackathon.com/" target="_blank">Seneca Hackathon Smart Cities - Finalist &#8226; 2023</a>
-          </li>
-
-          <li>
-            <img
-              width="20"
-              height="20"
-              src="https://img.icons8.com/plasticine/20/filled-star.png"
-              alt="filled-star"
-            />
-            <a href="https://www.octochain.ca/seneca-hackathon-2022/" target="_blank">Seneca Hackathon Sustainability - TDSB Winner &#8226; 2022</a>
-          </li>
-        </section>
-      </div>
+              </li>
+              <li>
+                <a href="#projects">
+                  <img class="a-normal" src="image/normal-link.png" width="20" />
+                  <img class="a-active" src="image/active-link.png" width="20" />
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a href="#certifications">
+                  <img class="a-normal" src="image/normal-link.png" width="20" />
+                  <img class="a-active" src="image/active-link.png" width="20" />
+                  Certifications & Awards
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <p id="guest">
+          Number of Enchanted Guests: <span id="guest-number"><span id="loading"></span></span>
+        </p>
+      </section>
     </div>
-  </body>
+    <div class="right-layout">
+      <section id="about">
+        <div class="title">
+          <img width="30"
+            src="data:image/png;base64,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" />
+          About Me
+        </div>
+        <p>
+          Hello, lovely visitors! My name is Vivy Vuong, a computer diploma graduate from Seneca College (Class of
+          2024). My journey in coding began when I was in grade 10, and ever since, I have been interested in
+          problem-solving and developing comprehensive software applications.
+        </p>
+        <p>
+          In the year 2022, I had the opportunity to explore cloud technology and I fell in love with it. Besides
+          practicing my coding skills, I have spent time learning AWS and Azure. During this journey, I obtained an
+          Azure Fundamental (AZ-900) certification and AWS Developer Associate (DVA-C02) certification. I have also
+          gained experience in configuring diverse environments, setting up CI/CD pipelines, and using different AWS
+          services to build applications.
+        </p>
+        <p>
+          I love technology and supporting people. Moreover, system design is very interesting to me. Therefore, my
+          ultimate dream is to become a skilled DevOps professional.
+        </p>
+        <p>
+          As for hobbies, I enjoy swimming, playing computer games (Stardew Valley is my favorite), and surfing Reddit.
+          Beyond technology, I also love talking and making new friends. So let's connect and explore the world of
+          technology together!
+        </p>
+      </section>
+      <section id="experiences">
+        <div class="title">
+          <img width="30"
+            src="data:image/png;base64,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" />
+          Experiences
+        </div>
+        <div class="job-board">
+          <div class="job card">
+            <div class="date">
+              <img width="20" height="20"
+                src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/32/external-cloud-valentines-day-kmg-design-outline-color-kmg-design.png"
+                alt="external-cloud-valentines-day-kmg-design-outline-color-kmg-design" alt="decorative" />
+              Sep 2021 - Present (Part time)
+            </div>
+            <div class="job-description">
+              <img width="20"
+                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-rainbow-vikings-flaticons-lineal-color-flat-icons.png"
+                alt="decorative" />
+              <span class="job-title">Data Entry Specialist </span></br>
+              <span class="job-location">Vican Multi-Service </span>
+              <p>
+                Effectively resolving customer supports across multiple
+                channels, ensuring quick resolutions and positive experiences.
+                Additionally, complete over 200 daily data entry tasks with an
+                accuracy rate over 98%
+              </p>
+              <span class="tag">Customer Support</span>
+              <span class="tag">Data Entry</span>
+            </div>
+          </div>
+
+          <div class="job card">
+            <div class="date">
+              <img width="20" height="20"
+                src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/32/external-cloud-valentines-day-kmg-design-outline-color-kmg-design.png"
+                alt="external-cloud-valentines-day-kmg-design-outline-color-kmg-design" alt="decorative" />
+              Sep 2023 - Nov 2023 (Intern)
+            </div>
+            <div class="job-description">
+              <img width="20"
+                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-rainbow-vikings-flaticons-lineal-color-flat-icons.png"
+                alt="decorative" />
+              <span class="job-title">
+                IT Support
+              </span> </br>
+              <span class="job-location">
+                Seneca - ITS Student Lab Monitor and Hyflex ambassador
+              </span>
+              <p>
+                Proactively monitor computer Lab rooms and e-classrooms prior
+                to session start, ensure operation readiness functionality.
+                Assisting staff and professors in resolving technical issues
+                when using computers, touch pads, podium, AV gear, projectors
+                during class time.
+              </p>
+              <span class="tag">Customer Support</span>
+              <span class="tag">IT Support</span>
+            </div>
+          </div>
+
+          <div class="job card">
+            <div class="date">
+              <img width="20" height="20"
+                src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/32/external-cloud-valentines-day-kmg-design-outline-color-kmg-design.png"
+                alt="external-cloud-valentines-day-kmg-design-outline-color-kmg-design" alt="decorative" />
+              Sep 2022 - Aug 2023 (Co-op)
+            </div>
+            <div class="job-description">
+              <img width="20"
+                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-rainbow-vikings-flaticons-lineal-color-flat-icons.png"
+                alt="decorative" />
+              <span class="job-title">
+                System Developer (Junior DevOps)
+              </span></br>
+              <span class="job-location">
+                Healthcare of Ontario Pension Plan - HOOPP
+              </span>
+              <p>
+                Set up developer test pipeline in Azure DevOps using xUnit and
+                Moq for .NET application, ensure that 100% codebase is correct
+                and run as expected. Cleaned up multiple applications to
+                separate data, presentation and application layer to improve
+                code readiness.
+              </p>
+              <span class="tag">C#</span>
+              <span class="tag">.NET</span>
+              <span class="tag">xUnit</span>
+              <span class="tag">Moq</span>
+              <span class="tag">Azure DevOps</span>
+            </div>
+          </div>
+        </div>
+        <li class="section-link">
+          <img width="24" height="24"
+            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-fairy-tale-literature-flaticons-lineal-color-flat-icons.png"
+            alt="external-fairy-tale-literature-flaticons-lineal-color-flat-icons" />
+          <a href="resume.pdf" target="_blank">
+            View full resume
+          </a>
+        </li>
+      </section>
+
+      <section id="projects">
+        <div class="title">
+          <img width="30"
+            src="data:image/png;base64,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" />
+          Projects
+        </div>
+
+        <div class="card">
+          <div class="date">
+            <img src="image/aws-project.png" width="200" />
+          </div>
+          <div class="job-description">
+            <img width="20"
+              src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-rainbow-vikings-flaticons-lineal-color-flat-icons.png"
+              alt="decorative" />
+            <span class="job-title"><a href="https://gitfront.io/r/Vivy24/evw3oGuD7j2k/fragments/" target="_blank">AWS
+                Data Storage
+              </a>
+            </span>
+            <p>
+              A web application integrated with AWS services (ECS, ELB S3
+              Bucket, DynamoDB, Cognito and Route 53) that allows users to
+              upload, access, and handle different types of data fragments.
+              Set up a robust CI/CD pipelines for automated test and deploy
+              through Github Actions
+            </p>
+            <span class="tag">Typescript</span>
+            <span class="tag">AWS Services</span>
+            <span class="tag">NextJS</span>
+            <span class="tag">ExpressJS</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="date">
+            <img src="image/peertutor.png" width="200" />
+          </div>
+          <div class="job-description">
+            <img width="20"
+              src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-rainbow-vikings-flaticons-lineal-color-flat-icons.png"
+              alt="decorative" />
+            <span class="job-title">
+              <a href="https://github.com/Vivy24/PeerTutor" target="_blank">Peer Tutor
+              </a>
+            </span>
+            <p>
+              A web application written in PERN stacks that allows users to
+              book study time with other students. Integrated with 3 types of
+              users, admin , tutor and student. Deployed to Vercel
+            </p>
+            <span class="tag">Javascript</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">ExpressJS</span>
+            <span class="tag">React</span>
+            <span class="tag">Vercel</span>
+          </div>
+        </div>
+
+        <li class="section-link">
+          <img width="24" height="24"
+            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-fairy-tale-literature-flaticons-lineal-color-flat-icons.png"
+            alt="external-fairy-tale-literature-flaticons-lineal-color-flat-icons" />
+          <a href="/project.html"> Go to project world </a>
+        </li>
+      </section>
+      <section id="certifications">
+        <div class="title">
+          <img width="30"
+            src="data:image/png;base64,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" />
+          Certifications & Awards
+        </div>
+
+        <li>
+          <img width="20" height="20" src="https://img.icons8.com/plasticine/20/filled-star.png" alt="filled-star" />
+          <a href="https://www.credly.com/badges/61907c8c-b44b-49d0-afd1-fcf655c699fb" target="_blank">AWS Developer
+            Associate &#8226; February 2024</a>
+        </li>
+        <li>
+          <img width="20" height="20" src="https://img.icons8.com/plasticine/20/filled-star.png" alt="filled-star" />
+          <a href="https://www.credly.com/badges/309c8ddf-9565-4872-bf76-57e9cfe2e614?source=linked_in_profile"
+            target="_blank">Microsoft Certified: Azure Fundamental &#8226; September 2021</a>
+        </li>
+
+        <li>
+          <img width="20" height="20" src="https://img.icons8.com/plasticine/20/filled-star.png" alt="filled-star" />
+          <a href="https://2023.senecahackathon.com/" target="_blank">Seneca Hackathon Smart Cities - Finalist &#8226;
+            2023</a>
+        </li>
+
+        <li>
+          <img width="20" height="20" src="https://img.icons8.com/plasticine/20/filled-star.png" alt="filled-star" />
+          <a href="https://www.octochain.ca/seneca-hackathon-2022/" target="_blank">Seneca Hackathon Sustainability -
+            TDSB Winner &#8226; 2022</a>
+        </li>
+      </section>
+    </div>
+  </div>
+</body>
+
 </html>
